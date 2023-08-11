@@ -2,6 +2,7 @@
 declare namespace Express {
   export interface Request {
     options: {
+	    ignoreRoutes?: string[];
       maxDelay?: number;
       probability?: number;
       errCodes?: number[];

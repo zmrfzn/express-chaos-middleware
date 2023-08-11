@@ -16,6 +16,7 @@ type UserOptions = {
 	maxDelay?: number;
 	errCodes?: number[];
 	rules?: Function[];
+	ignoreRoutes?:string[];
 };
 
 type ChaosOptions = UserOptions & {
@@ -106,6 +107,11 @@ function chaos(options?: UserOptions) {
 	];
 
 	return (req: Request, res: Response, next: NextFunction) => {
+
+		if(chaosOptions?.ignoreRoutes && chaosOptions?.ignoreRoutes?.includes(req.path)) {
+				return next();
+		}
+		
 		req.options = chaosOptions;
 		const rand = Math.floor(chaosOptions.rng() * 100);
 		if (rand <= probability) {
