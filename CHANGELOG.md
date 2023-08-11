@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/zmrfzn/express-chaos-middleware/compare/v1.2.4...v1.3.0) (2023-08-11)
+
+
+### Features
+
+* add option to ignore user provided routes ([ee644bc](https://github.com/zmrfzn/express-chaos-middleware/commit/ee644bc27cb1c2d44c0f58841201929c68e03e1d))
+
 ## [1.2.4](https://github.com/drouian-m/express-chaos-middleware/compare/v1.2.3...v1.2.4) (2023-04-05)
 
 
